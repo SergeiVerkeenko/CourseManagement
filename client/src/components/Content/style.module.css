@@ -1,0 +1,56 @@
+.img {
+    background-image: url(./Icon.svg);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 12px 0 0 24px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.wrapper h2 {
+    color: #5E96FC;
+}
+
+.wrapper {
+    width: 448px;
+    height: 136px;
+    background: #FFFFFF;
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+
+
+.wrapper h2 {
+    margin: 24px 0 0 24px;
+}
+
+.opisanie {
+    margin: 12px 0 0 24px;
+}
+
+.block {
+    display: flex;
+}
+
+.block p {
+    margin: 12px 0 0 5px;
+
+}
+
+.btnSearch {
+    margin-right: 40px;
+}
+
+.inputSearch {
+    width: 981px;
+    margin: 33px auto;
+    margin-top: 111px;
+}

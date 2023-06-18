@@ -1,0 +1,34 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    list-style-type: none;
+    padding: 10p;
+}
+
+li {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+
+}
+
+li:hover {
+    background-color: #5E96FC;
+    color: blue;
+}
