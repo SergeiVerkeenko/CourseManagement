@@ -2,7 +2,6 @@ import ContentItem from './ContentItem'
 import style from './style.module.css'
 import { useGetCourseQuery } from '../../service/course'
 import { useEffect, useState } from 'react'
-// import data from '../../data/data.json'
 import Pagination from '../Pagination/Pagination'
 import { Button, Input } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
@@ -18,7 +17,7 @@ function Content() {
 
 
         const getCountries = () => {
-            const storage = data ?? []
+            const storage = data ||[]
             setContries(storage)
         }
 
@@ -31,10 +30,12 @@ function Content() {
     const firstIndex = lastIndex - informationPerPage
     const currentInfo = information.slice(firstIndex, lastIndex)
 
+    const [valueName, setValueName] = useState('')
+    const filteredTask = currentInfo.filter(el => el.nameCourse.toLowerCase().includes(valueName))
+
 
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
-    const filteredTask = information.filter(el=> el.name.toLowerCase.includes(value.to()))
     return (
         <>
             <Input
@@ -46,11 +47,12 @@ function Content() {
                 rightSection={
                     <Button
                         radius="md" size="xs"
-                        className={style.btnSearch}>Поиск</Button>
+                        className={style.btnSearch}
+                        onClick={() => setValueName(value)}>Поиск</Button>
                 }
             />
             <div className={style.box}>
-                {currentInfo.map(el => <ContentItem nameCourse={el.nameCourse} description={el.description} city={el.city} />)}
+                {filteredTask.map(el => <ContentItem nameCourse={el.nameCourse} description={el.description} city={el.city} />)}
             </div>
 
             <Pagination

@@ -7,6 +7,8 @@ function CreateOperation() {
     const [value, setValue] = useState({ nameCourse: "", description: "", city: "" })
     function sendRequest() {
         createCourse(value)
+        window.location.reload()
+
     }
     function changeInputValue(event) {
         setValue({ ...value, [event.target.name]: event.target.value })
@@ -19,7 +21,7 @@ function CreateOperation() {
             <Input name='description' placeholder="description" onChange={changeInputValue}></Input>
             <h1>Город</h1>
             <Input name='city' placeholder="city" onChange={changeInputValue}></Input>
-            <Button onClick={sendRequest}>BUTTON</Button>
+            <Button onClick={sendRequest}>Создать</Button>
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper input {
+    width: 400px;
+    margin: auto auto 25px auto;
+}
+
+
+.wrapper button {
+    margin-left: 40%;
+}
+
+.wrapper h1 {
+    color: #232134;
+    font: 700 16px 'Inter';
+    margin: auto auto 1% 24%;
+}
+
+
