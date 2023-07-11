@@ -7,6 +7,7 @@ export const courseApi = createApi({
         getCourse: builder.query({
             query: () => `course/`
         }),
+        
         getCourseById: builder.query({
             query: (id) => `course/${id}`
         }),
